@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class ThreeDimensionArray {
+    public static void main(String args[]) {
+
+        Scanner s = new Scanner(System.in);
+        int age[][][] = new int[2][3][5];
+
+        // Input values
+        for (int i = 0; i < age.length; i++) {
+            for (int j = 0; j < age[i].length; j++) {
+                for (int k = 0; k < age[i][j].length; k++) {
+                    System.out.println("Enter the age of student " + k +
+                            " classroom " + j + " branch " + i);
+                    age[i][j][k] = s.nextInt();
+                }
+            }
+        }
+
+        // Display values
+        System.out.println("\n.......ages are.......");
+        for (int i = 0; i < age.length; i++) {
+            for (int j = 0; j < age[i].length; j++) {
+                for (int k = 0; k < age[i][j].length; k++) {
+                    System.out.println("Branch " + i +
+                            " Classroom " + j +
+                            " Student " + k +
+                            " Age: " + age[i][j][k]);
+                }
+            }
+        }
+
+        s.close();
+    }
+}
